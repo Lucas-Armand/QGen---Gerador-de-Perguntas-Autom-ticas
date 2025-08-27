@@ -1,4 +1,4 @@
-# QGen — Gerador de Perguntas Automáticas (Start do Projeto)
+# QGen — Gerador de Perguntas Automáticas
 
 Plataforma simples (Streamlit + Docker) para **gerar perguntas de múltipla escolha** a partir do conteúdo um texto de aula. 
 
