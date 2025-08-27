@@ -1,6 +1,6 @@
 # QGen — Gerador de Perguntas Automáticas
 
-🎥 [Assista ao vídeo explicativo no YouTube](https://youtu.be/vzNmwpo6GxI)
+🎥 [![Assista ao vídeo explicativo no YouTube](https://github.com/Lucas-Armand/QGen---Gerador-de-Perguntas-Autom-ticas/blob/main/img/Captura%20de%20tela%20de%202025-08-27%2012-20-51.png)](https://youtu.be/vzNmwpo6GxI)
 
 Plataforma simples (Streamlit + Docker) para **gerar perguntas de múltipla escolha** a partir do conteúdo um texto de aula. 
 
