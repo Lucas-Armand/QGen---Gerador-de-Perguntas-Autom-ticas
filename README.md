@@ -45,10 +45,10 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 ## Roadmap (Baby Steps)
 
 **ETAPA 1 —  Início**
-- [ ] Estrutura do app (Streamlit + rotas entre telas)
-- [ ] Upload `.txt` e armazenamento temporário
-- [ ] LLM Mockado
-- [ ] Tela de resultados + **Download JSON**
+- [x] Estrutura do app (Streamlit + rotas entre telas)
+- [x] Upload `.txt` e armazenamento temporário
+- [x] LLM Mockado
+- [x] Tela de resultados 
 - [ ] Ler papers sobre Geração de Perguntas com LLM
 
 **ETAPA 2 — LLM Local**
@@ -70,17 +70,18 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 
 ## Estrutura Inicial (proposta)
 
-``
+```
 ./
-├─ app/
-├─ data/
-│  └─ samples/         
-├─ tests/
-├─ .env.example
-├─ docker-compose.yml
-├─ Dockerfile
-└─ README.md            # (este arquivo)
-``
+├── app
+│   ├── app.py
+│   ├── llm_mock.py
+│   └── __pycache__
+│       └── llm_mock.cpython-38.pyc
+├── README.md
+├── requirements.txt
+└── sample
+    └── aula.txt
+```
 
 ---
 
@@ -119,23 +120,23 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 ## Como rodar (rascunho)
 
 **Local (sem Docker, com baseline):**
-``
+```
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # ajustar LLM_BACKEND=baseline
 streamlit run app/app.py
-``
+```
 
 **Local + Ollama:**
-``
+```
 ollama pull mistral:7b-instruct
 # .env → LLM_BACKEND=ollama | OLLAMA_HOST=http://localhost:11434 | OLLAMA_MODEL=mistral:7b-instruct
 streamlit run app/app.py
 ```
 
 **Docker (rascunho):**
-``
+```
 docker-compose up --build
 # app em http://localhost:8501
 ```
