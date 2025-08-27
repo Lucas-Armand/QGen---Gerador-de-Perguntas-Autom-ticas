@@ -1,0 +1,40 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    # Monta o projeto para live-reload no dev
+    volumes:
+      - .:/app
+    env_file: [.env]       
+    depends_on:
+      - llm
+    command: >
+      streamlit run app/app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.enableCORS=false
+
+  llm:
+    image: ollama/ollama:latest
+    container_name: qgen-llm
+    restart: unless-stopped
+    ports:
+      - "11434:11434"    # opcional expor; a app já acessa via rede interna
+    volumes:
+      - ollama_data:/root/.ollama
+    # puxa o modelo automaticamente na 1a subida
+    entrypoint: >
+      /bin/sh -lc "
+        ollama serve &
+        sleep 2 &&
+        ollama pull ${OLLAMA_MODEL:-llama3.2:3b-instruct} &&
+        tail -f /dev/null
+      "
+    env_file: [.env]       
+    command: ["ollama", "serve"]
+    tty: true
+
+volumes:
+  ollama_data:
+

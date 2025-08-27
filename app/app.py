@@ -1,7 +1,12 @@
+# app/app.py
+import os
 import json
 from datetime import datetime
 import streamlit as st
 from llm_mock import generate_mock_questions
+from llm_ollama import generate_questions_via_ollama
+
+BACKEND = os.getenv("LLM_BACKEND", "mock").strip().lower()  # "mock" | "ollama"
 
 st.set_page_config(page_title="QGen — MVP", layout="wide")
 
@@ -57,7 +62,14 @@ if selected == "Upload":
         else:
             st.session_state.text = text
             st.session_state.n_questions = int(n_q)
-            qs = generate_mock_questions(text, n=int(n_q))
+
+            if BACKEND == "mock":
+                qs = generate_mock_questions(text, n=int(n_q))
+            if BACKEND == "ollama":
+                qs = generate_questions_via_ollama(text, n=int(n_q))
+
+            print(qs)
+
             if not qs:
                 st.warning("No questions generated (text too short?). Try with a longer content.")
             else:

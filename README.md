@@ -6,7 +6,6 @@ A app deve rodar em dois modos:
 1) **Local** usando modelos abertos (ex.: `llama3.2:3b-instruct`, `mistral:7b-instruct`);
 2) **Nuvem** usando algum modelo gratuita (via Google Gemini (AI Studio) ou OpenRouter).
 
-
 ---
 
 ## Problema & Objetivo
@@ -49,11 +48,11 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 - [x] Upload `.txt` e armazenamento temporário
 - [x] LLM Mockado
 - [x] Tela de resultados 
-- [ ] Ler papers sobre Geração de Perguntas com LLM
+- [x] Ler papers sobre Geração de Perguntas com LLM
 
 **ETAPA 2 — LLM Local**
-- [ ] Client Ollama (HTTP) com modelo configurável
-- [ ] Prompt base 
+- [x] Client Ollama (HTTP) com modelo configurável
+- [x] Prompt base 
 
 **ETAPA 3 — LLM Online (opcional)**
 - [ ] Integração Gemini (AI Studio)
@@ -62,25 +61,25 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 - [ ] Heurísticas: filtrar sentenças curtas/repetidas; evitar termos triviais
 - [ ] Métricas simples sobre a qualidade das perguntas e respostas
 - [ ] Testes mínimos 
-- [ ] Dockerfile + docker-compose (app e, opcionalmente, serviço llm)
+- [x] Dockerfile + docker-compose (app e, opcionalmente, serviço llm)
 
-**ETAPA 5 — Próximos Passos (não-MVP)**
-- [ ] Planejar próximos passos
 ---
 
-## Estrutura Inicial (proposta)
+## Estrutura do projeto
 
 ```
 ./
 ├── app
 │   ├── app.py
 │   ├── llm_mock.py
-│   └── __pycache__
-│       └── llm_mock.cpython-38.pyc
+│   ├── llm_ollama.py
+├── docker-compose.yml
+├── Dockerfile
 ├── README.md
 ├── requirements.txt
 └── sample
     └── aula.txt
+
 ```
 
 ---
@@ -88,7 +87,7 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 ## Riscos & Mitigações
 
 - **Limites de API Free**: manter fallback local e baseline.
-- **Qualidade dos distratores**: começar simples (vocabulário do texto) e evoluir com LLM local.
+- **Qualidade dos distratores**: começar simples (vocabulário do texto) e evoluir.
 - **Tempo de inferência**: preferir prompts curtos, modelos leves; streaming opcional.
 - **Variabilidade do LLM**: padronizar instruções e pós-processar para formato JSON estrito.
 
@@ -110,7 +109,26 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
   - Escolha final dos modelos (começar com `mistral:7b-instruct` no Ollama).
   - Teste rápido de latência/saída (comparar baseline vs. LLM local).
   - Ajustar fallback de forma transparente (mensagem na UI).
-- **Papers para ler amanhã** (selecionados hoje na pesquisa):
+  
+## Diário de Trabalho — 27/08/2025
+
+- **Integração Docker + Streamlit + Ollama**
+  - Estruturamos o projeto com docker-compose contendo dois serviços:
+  - app: Streamlit rodando a interface;
+  - llm: container com Ollama rodando localmente.
+  - O app.py agora seleciona o backend via variável LLM_BACKEND no .env.
+  - O usuário pode trocar dinamicamente o backend nas configurações da interface (com reset de sessão).
+- **Modelos menores testados**
+  - Exploramos opções menores que o mistral:7b, como llama3.2:3b-instruct e phi3:mini-4k-instruct, para reduzir tempo de inferência em CPU.
+  - Ajustamos o Compose e .env para alternar facilmente entre modelos.
+- **Tratamento de erros de desenvolvimento**
+  - Timeout aumentado e streaming ativado para não travar em respostas longas.
+- **prompt engineering**
+  - Reescrevemos o PROMPT usando abordagem STAR
+  - Situação: texto da aula é só base;
+  - Tarefa: gerar 1 pergunta objetiva;
+  - Resultado: saída curta, clara e sem poluição.
+- **Leitura Papers** (selecionados na pesquisa no dia anterior):
   1) Li, K., & Zhang, Y. (2024). *Planning First, Question Second: An LLM-Guided Method for Controllable Question Generation* (ACL Findings 2024).
   2) Mucciaccia, S. S., et al. (2025). *Automatic Multiple-Choice Question Generation and Evaluation Systems Based on LLM* (COLING 2025).
   3) Tan, B., et al. (2025). *A Review of Automatic Item Generation Techniques Leveraging Large Language Models* (IJATE 2025).
@@ -118,30 +136,23 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 ---
 
 ## Como rodar (rascunho)
+1. Se desejar, edite o .env para configurar o backend e modelo desejado:
+```
+# usar backend mock (sem LLM real)
+LLM_BACKEND=mock
 
-**Local (sem Docker, com baseline):**
-```
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env   # ajustar LLM_BACKEND=baseline
-streamlit run app/app.py
-```
-
-**Local + Ollama:**
-```
-ollama pull mistral:7b-instruct
-# .env → LLM_BACKEND=ollama | OLLAMA_HOST=http://localhost:11434 | OLLAMA_MODEL=mistral:7b-instruct
-streamlit run app/app.py
+# ou usar Ollama (modelo local via container llm)
+LLM_BACKEND=ollama
+OLLAMA_HOST=http://llm:11434
+OLLAMA_MODEL=llama3.2:3b
 ```
 
-**Docker (rascunho):**
+2. Suba os serviços (app + llm):
 ```
-docker-compose up --build
-# app em http://localhost:8501
+docker compose up -d --build
 ```
 
----
-
-## Licença
-A definir (provável MIT).
+3. Acesse a aplicação:
+```
+http://localhost:8501
+```

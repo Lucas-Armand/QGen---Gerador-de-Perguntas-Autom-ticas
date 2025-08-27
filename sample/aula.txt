@@ -1,93 +1,35 @@
-Prof. José Maria - Língua Portuguesa para TRTs Brasil
-Como compreender e interpretar textos?
+Aula de Probabilidade
 
-Não há hoje uma prova de Língua Portuguesa que não priorize Interpretação de Textos. Não há! Todas,
-mas todas mesmo, abordam exaustivamente a capacidade de o aluno ler e interpretar textos de diversos tipos e
-gêneros.
-Isso é decorrência de uma guinada no foco de estudo da língua. Não se prioriza tanto nas provas atuais a
-Gramática Normativa no seu estado puro, descontextualizado. O centro das discussões passa a ser o discurso, as
-relações de sentido, os recursos expressivos. A Língua Portuguesa, portanto, tem como palco o texto! Tudo sai de
-lá! Inclusive as questões de Gramática! Isso demanda de nós o desenvolvimento das habilidades voltadas para
-leitura e interpretação.
-Ok, professor! Mas como se estuda esse troço? Existe algum livro bom para aprender a interpretar? Moçada,
-não é bem assim! Faço uma analogia com aprender a cobrar faltas. Como assim? Posso eu dar aquela aula show
-explicando tintim por tintim a teoria acerca da cobrança de faltas: a forma de chutar, a curva da bola, a direção do
-vento, etc. Posso passar os mais variados vídeos de grandes golaços de falta, apresentar depoimentos de grandes
-cobradores, etc. Isso de nada vai adiantar se você não praticar. Uma hora ou outra, vai ser necessário você pegar a
-bola, pô-la no gramado e experimentar os primeiros chutes. No começo a bola vai bater na barreira ou passar longe
-do gol. Depois, com mais treino e insistência, você começará a acertar o direcionamento do chute. E depois de um
-tempo, os primeiros gols e golaços.
-Da mesma forma é a Interpretação. Só se desenvolve essa habilidade praticando. É preciso ler variados
-tipos de texto – dos textos jornalísticos às charges e tirinhas; da prosa à poesia; do objetivo ao subjetivo. Claro que
-o conhecimento de certas técnicas e conceitos há de ajudá-lo a desenvolver essa habilidade. É isso que irei
-apresentar nesta aula! Vamos trazer exemplos variados, sempre frisando a forma de abordar o texto, quais
-elementos devemos checar, que pistas podemos no texto explorar.
-Nos tópicos a seguir, vamos responder à seguinte pergunta:
-O que é preciso para se compreender e interpretar adequadamente textos?
-Após a leitura do texto, é essencial que saibamos identificar do que o texto trata, ou seja, qual o assunto
-nele tratado, qual o tema.
-Quanto mais delimitado o tema, diga-se de passagem, melhor! Como assim? Muitas vezes o aluno afirma:
-Ah, o tema do texto é ‘mulher’!. Mas “mulher” é muito amplo! Tente delimitar, ou seja, pôr limites. O aluno afirma:
-Ah, entendi! O tema do texto é “A mulher na política”. Legal! Melhorou! Mas podemos delimitar ainda mais. Tente
-novamente! O aluno, então, afirma: Ah, o tema do texto é ‘”A discreta representatividade da mulher na política”.
-Pronto! Agora ficou legal! Bem delimitado.
-Vamos trabalhar essa habilidade com dois textos. No primeiro, acredito que você consiga numa boa
-identificar sua temática. Já no segundo, por se tratar de um texto de caráter literário, acredito que haja mais
-dificuldades. Vejamos:
+A probabilidade é o ramo da matemática que estuda fenômenos aleatórios. Um experimento aleatório é aquele cujo resultado não pode ser previsto com certeza, mas cujos possíveis resultados podem ser descritos.
 
-***
-A eterna juventude
-Conforme a lenda, haveria em algum lugar a Fonte da Juventude, cujas águas garantiriam pleno
-rejuvenescimento a quem delas bebesse. A tal fonte nunca foi encontrada, mas os homens estão dando um jeito de
-promover a expansão dos anos de "juventude" para limites jamais vistos. A adolescência começa mais cedo - veja-se
-o comportamento de "mocinhos" e "mocinhas" de dez ou onze anos - e promete não terminar nunca. Num comercial
-de TV, uma vovó fala com desenvoltura a gíria de um surfista. As academias e as clínicas de cirurgia plástica nunca
-fizeram tanto sucesso. Muitos velhos fazem questão de se proclamar jovens, e uma tintura de cabelo é indicada aos
-homens encanecidos como um meio de fazer voltar a "cor natural".
-Esse obsessivo culto da juventude não se explica por uma razão única, mas tem nas leis do mercado um sólido
-esteio. Tornou-se um produto rentável, que se multiplica incalculavelmente e vai da moda à indústria química, dos
-hábitos de consumo à cultura de entretenimento, dos salões de beleza à lipoaspiração, das editoras às farmácias.
-Resulta daí uma espécie de código comportamental, uma ética subliminar, um jeito novo de viver. O mercado, sempre
-oportunista, torna-se extraordinariamente amplo, quando os consumidores das mais diferentes idades são abrangidos
-pelo denominador comum do "ser jovem". A juventude não é mais uma fase da vida: é um tempo que se imagina poder
-prolongar indefinidamente.
-São várias as consequências dessa idolatria: a decantada "experiência dos mais velhos" vai para o baú de
-inutilidades, os que se recusam a aderir ao padrão triunfante da mocidade são estigmatizados e excluídos, a velhice se
-torna sinônimo de improdutividade e objeto de caricatura. Prefere-se a máscara grotesca do botox às rugas que os
-anos trouxeram, o motociclista sessentão se faz passar por jovem, metido no capacete espetacular e na roupa de couro
-com tachas de metal.
-É natural que se tenha medo de envelhecer, de adoecer, de definhar, de morrer. Mas não é natural que
-reajamos à lei da natureza com tamanha carga de artifícios. Diziam os antigos gregos que uma forma sábia de vida
-está na permanente preparação para a morte, pois só assim se valoriza de fato o presente que se vive. Pode-se
-perguntar se, vivendo nesta ilusão da eterna juventude, os homens não estão se esquecendo de experimentar a
-plenitude própria de cada momento de sua existência, a dinâmica natural de sua vida interior.
-***
+Chamamos de espaço amostral o conjunto de todos os resultados possíveis, e denotamos por Omega. Cada resultado particular é chamado de evento elementar, e um conjunto de resultados é chamado de evento.
 
-Viu, que história é essa? Está tentando pular etapas? Volte e leia tudo, não podemos ter preguiça não!
-Moçada, é sério, a preguiça mata qualquer possibilidade de sucesso em questões de interpretação, principalmente
-de concursos. Não podemos ser reféns dela não, ok?
-Pronto, agora que você leu tudo, vamos discutir de forma bem objetiva. Se fosse para citar o tema principal
-desse texto, o que você me diria?
-Vamos lá...
-O texto em questão, intitulado “A eterna juventude” (Já é uma pista!), fala sobre muitas coisas. Por
-exemplo, faz-se, no 1º parágrafo, referência à lenda da Fonte da Eterna Juventude. No 2º parágrafo, fala-se da
-indústria da beleza, e como esta consegue tirar bastante proveito (lucro) do culto obsessivo pela juventude (Opa,
-tá ficando quente!). O 3º parágrafo assume uma postura mais crítica no que se refere ao artificialismo daqueles que
-tentam imitar os mais jovens. No 4º parágrafo, fala-se do medo de envelhecer, como motivador para a
-manutenção de uma aparência jovem.
-Essas informações que listamos estão a serviço de um tema mais abrangente. Como podemos defini-lo?
-Vamos sintetizar da seguinte maneira: O CULTO OBSESSIVO DA JUVENTUDE.
-Definimos, assim, o norte do texto. As informações que foram nele mencionadas parágrafo a parágrafo
-são meros desdobramentos desse tema central, portanto. A menção à lenda da Fonte da Juventude, por exemplo,
-é apenas um ensejo (motivador) para a tratativa do tema; a referência à indústria da beleza é para evidenciar uma
-consequência desse culto exagerado da juventude; a crítica ao artificialismo da juventude é um juízo de valor
-emitido pelo autor; por fim, o medo de envelhecer é apresentado como uma das causas para a juventude ser tão
-cultuada.
-Veja só, todas as informações giram em torno do tema central. Moçada, o que fica claro? Para dar o
-pontapé no entendimento do texto, necessitamos entender do que ele fala, ou melhor, precisamos identificar o
-seu norte, o seu TEMA PRINCIPAL. Não podemos perder esse norte, sob pena de chegarmos a conclusões
-precipitadas.
-Você já iniciou uma conversa entre amigos e aquele assunto inicial foi se perdendo ao longo do caminho?
-Quando você percebeu, estavam falando de coisas completamente diferentes do assunto inicial da conversa. Pois
-é, na leitura do texto, não podemos perder o norte da conversa. Vamos identificando as informações e
-constatando: essa está dentro dessa, que está dentro dessa, que está dentro daquela.
+Exemplo:
+No lançamento de um dado honesto, o espaço amostral é:
+Omega = {1,2,3,4,5,6}
+O evento "sair um número par" é o subconjunto:
+A = {2,4,6}
+
+A probabilidade de um evento A é definida como:
+P(A) = numero de elementos de A dividido pelo numero de elementos de Omega.
+
+No exemplo do dado:
+P(A) = 3/6 = 1/2
+
+Assim, temos 50 por cento de chance de obter um número par.
+
+Propriedades basicas da probabilidade:
+
+Nao negatividade: P(A) maior ou igual a 0
+
+Normalizacao: P(Omega) = 1
+
+Aditividade: Se A e B são eventos mutuamente exclusivos, entao P(A U B) = P(A) + P(B)
+
+Exemplo:
+No lançamento de um dado:
+Evento A = sair um numero menor ou igual a 2 = {1,2}
+Evento B = sair um numero maior ou igual a 5 = {5,6}
+
+Os eventos A e B sao disjuntos.
+P(A U B) = P(A) + P(B) = 2/6 + 2/6 = 4/6 = 2/3
