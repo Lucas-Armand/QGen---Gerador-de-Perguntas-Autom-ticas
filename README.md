@@ -1,5 +1,7 @@
 # QGen — Gerador de Perguntas Automáticas
 
+🎥 [Assista ao vídeo explicativo no YouTube](https://youtu.be/vzNmwpo6GxI)
+
 Plataforma simples (Streamlit + Docker) para **gerar perguntas de múltipla escolha** a partir do conteúdo um texto de aula. 
 
 A app deve rodar em dois modos:
@@ -124,7 +126,7 @@ Educadores e criadores de conteúdo precisam transformar rapidamente **textos de
 - **Tratamento de erros de desenvolvimento**
   - Timeout aumentado e streaming ativado para não travar em respostas longas.
 - **prompt engineering**
-  - Reescrevemos o PROMPT usando abordagem STAR
+  - Reescrevemos o PROMPT usando abordagem COSTAR
   - Situação: texto da aula é só base;
   - Tarefa: gerar 1 pergunta objetiva;
   - Resultado: saída curta, clara e sem poluição.
